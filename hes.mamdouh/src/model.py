@@ -64,7 +64,7 @@ def infere_model(model_path,input_data,device):
             min_new_tokens=40 if int(tokens * 0.3) < 40 else int(tokens * 0.3)               
         )
 
-        summary = tokenizer.decode(
+        summary = tokenizer.batch_decode(
             outputs,
             skip_special_tokens=True,
             clean_up_tokenization_spaces=True
