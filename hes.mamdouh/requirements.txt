@@ -1,0 +1,5 @@
+qalsadi
+datasets
+rouge_score
+nltk
+git+https://github.com/hisham3/tnkeeh.git@63cf0934d0386b86962d34a0a2f4479634e2141e
