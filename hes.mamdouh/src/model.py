@@ -68,7 +68,7 @@ def infere_model(model_path,input_data,device):
             outputs,
             skip_special_tokens=True,
             clean_up_tokenization_spaces=True
-        )
+        )[0]
 
         print(summary)
 
