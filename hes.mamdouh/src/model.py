@@ -60,8 +60,8 @@ def infere_model(model_path,input_data,device):
             attention_mask=inputs["attention_mask"].to(device),
             num_beams=6,
             length_penalty=1.2,
-            max_new_tokens=int(tokens * 0.4) + 20,
-            min_new_tokens=40 if int(tokens * 0.3) < 40 else int(tokens * 0.3)               
+            max_new_tokens=int(tokens * 0.4) - 20,
+            min_new_tokens=20 if int(tokens * 0.3) < 20 else int(tokens * 0.3)               
         )
 
         summary = tokenizer.batch_decode(
